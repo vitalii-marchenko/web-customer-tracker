@@ -52,12 +52,12 @@ public class CustomerDAOImpl implements CustomerDAO {
         Query theQuery = null;
         if (theSearchName != null && theSearchName.trim().length() > 0) {
 
-            theQuery = currentSession.createQuery("from Customer where lower(firstName) like :theName or lower(lastName) like :theName", Customer.class);
+            theQuery = currentSession.createQuery("from Customer where lower(firstName) like :theName or lower(lastName) like :theName");
             theQuery.setParameter("theName", "%" + theSearchName.toLowerCase() + "%");
 
         }
         else {
-            theQuery = currentSession.createQuery("from Customer", Customer.class);
+            theQuery = currentSession.createQuery("from Customer");
         }
 
         return theQuery.getResultList();
