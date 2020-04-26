@@ -19,7 +19,6 @@
             </div>
         </div>
 
-
         <div id="container">
             <h3>Save Customer</h3>
 
@@ -54,6 +53,5 @@
                 <a href="/customer/list">Back to List</a>
             </p>
         </div>
-        
     </body>
 </html>
